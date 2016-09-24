@@ -1,0 +1,7 @@
+-create grid
+  -grid is empty
+
+-user input places properly in grid
+  -user can only input once on each turn
+  -user can only place their own symbol
+-game status

@@ -13,7 +13,13 @@ class TestTicTacToe(unittest.TestCase):
 
     def test_change_button(self):
         self.tictactoe.grid[2][0] = ButtonState.X
-        self.assertEqual(ButtonState.X ,self.tictactoe.grid[2][0])
+        self.assertEqual(ButtonState.X, self.tictactoe.grid[2][0])
+
+    def test_win_by_column(self):
+        self.tictactoe.grid[0][0] = ButtonState.X
+        self.tictactoe.grid[1][0] = ButtonState.X
+        self.tictactoe.grid[2][0] = ButtonState.X
+        self.assertEqual(GameStatus.Won, self.tictactoe.get_game_status("X"))
 
 
 
